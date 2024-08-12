@@ -12,4 +12,14 @@
 #### 6. Arduino Uno R3
 #### 7. Breadboard
 
+## Code Information
+
+#### The C++ code for this project implements the following:
+
+#### 1. Emergency Mode: Features a pushbutton to activate a white LED for emergency vehicles. When the button is pressed, the system overrides the traffic lights and displays an emergency message on the LCD.
+
+#### 2. Debouncing Logic: Includes a debounce mechanism to ensure reliable button presses by filtering out noise and accidental triggers.
+
+#### 3. LED Control: Manages the state of multiple LEDs to represent traffic lights and emergency signals. The LEDs are controlled through digital I/O pins, with their state changes reflected through textual commands on the LCD.
+
 #### For further details on the design and code implementation, feel free to refer to the Hardware.md file and the .cpp code file(s) in this folder.
