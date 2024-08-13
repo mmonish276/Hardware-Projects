@@ -14,14 +14,57 @@
 #### 8. Positional Microservo
 #### 9. Piezo Buzzer
 
-## Code Information
-#### The C++ code performs the following functions:
+## Purposes of Key Components
 
-#### 1. LiquidCrystal Library: Controls the 16x2 LCD to display distance information.
-#### 2. Servo Library: Moves the ultrasonic sensor across a 180-degree range.
-#### 3. Ultrasonic Sensor: Measures the distance to objects.
-#### 4. LED and Buzzer: Provide visual and auditory alerts when an object is detected.
-#### 5. Servo Motor: Sweeps the ultrasonic sensor from 0 to 180 degrees to detect objects.
-#### 6. Distance Measurement: Uses the ultrasonic sensor to calculate and display the distance of detected objects.
-##
-#### For more detailed information about the design and code, refer to the Hardware.md file and the .cpp code file(s) in this folder.
+1. **Ultrasonic Distance Sensor**
+   - Measures the distance to an object using sound waves.
+   - Triggered by sending a pulse and measuring the duration of the returned echo.
+
+2. **Servo Motor**
+   - Rotates the sensor across a 180-degree range to scan for objects.
+   - Controlled to sweep from 0 to 180 degrees and back.
+
+3. **LCD Display**
+   - Shows the distance to the detected object.
+   - Provides visual feedback if an object is detected within the specified range.
+
+4. **LED and Piezo Buzzer**
+   - Provides a visual and auditory alert when an object is detected.
+   - The LED lights up, and the buzzer emits a sound if the object is within the detectable range.
+
+## Code Description
+
+1. **Libraries and Initialization**
+   - Includes `LiquidCrystal` for LCD control and `Servo` for servo motor control.
+   - Initializes the servo motor and LCD display.
+
+2. **Setup Function**
+   - Configures the pin modes for the LED, buzzer, and servo motor.
+   - Attaches the servo motor to a specified pin and sets its range.
+
+3. **Loop Function**
+   - Rotates the servo from 0 to 180 degrees and back, scanning for objects.
+   - Calls `measureDistance()` to get distance measurements after each servo movement.
+
+4. **Measure Distance Function**
+   - Triggers the ultrasonic sensor to emit a pulse and measures the time taken for it to return.
+   - Calculates the distance and converts it to centimeters.
+   - Updates the LCD with the distance if an object is detected within 200 cm.
+   - Activates the LED and Piezo if the distance is less than 200 cm, and provides alerts.
+   - Clears the LCD and deactivates the LED and buzzer if no object is detected within range.
+
+## Usage
+
+1. **Connect the Hardware**
+   - Connect the ultrasonic sensor, servo motor, LCD display, LED, and buzzer to the specified pins on your microcontroller.
+
+2. **Upload the Code**
+   - Use the Arduino IDE to upload the provided code to your microcontroller.
+
+3. **Observe the Output**
+   - Watch the LCD for distance readings and the LED and buzzer for alerts when an object is detected.
+
+## Requirements
+
+- **Hardware**: Ultrasonic distance sensor, servo motor, LCD display, LED, buzzer.
+- **Software**: Arduino IDE, required libraries (`LiquidCrystal`, `Servo`).
