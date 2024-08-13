@@ -12,14 +12,48 @@
 #### 6. Arduino Uno R3
 #### 7. Breadboard
 
-## Code Information
+## Purposes of Key Components
 
-#### The C++ code for this project implements the following:
+1. **White LED**
+   - Represents the emergency vehicle.
+   - Controlled by a button press to activate or deactivate.
 
-#### 1. Emergency Mode: Features a pushbutton to activate a white LED for emergency vehicles. When the button is pressed, the system overrides the traffic lights and displays an emergency message on the LCD.
+2. **LCD Display**
+   - Shows status messages and instructions to drivers.
+   - Updates based on the state of the emergency vehicle and traffic light phases.
 
-#### 2. Debouncing Logic: Includes a debounce mechanism to ensure reliable button presses by filtering out noise and accidental triggers.
+3. **Traffic Lights**
+   - Red, green, and yellow LEDs simulate traffic light signals.
 
-#### 3. LED Control: Manages the state of multiple LEDs to represent traffic lights and emergency signals. The LEDs are controlled through digital I/O pins, with their state changes reflected through textual commands on the LCD.
+4. **Button**
+   - Triggers emergency vehicle mode when pressed.
+
+## Code Description
+
+1. **Libraries and Initialization**
+   - Includes the `LiquidCrystal` library for LCD control.
+   - Defines pins for the emergency LED, traffic light LEDs, and button.
+   - Initializes the LCD and sets pin modes.
+
+2. **Setup Function**
+   - Configures pins for output (LEDs) and input (button).
+
+3. **Loop Function**
+   - Implements debouncing for the button to detect state changes in push button.
+   - Toggles the emergency LED state based on button presses.
+   - Displays a message on the LCD when the emergency LED is on and for each other traffic light.
+
+4. **Traffic Light Control**
+   - **Red Light**: Turns on for 5 seconds with a message to "Remain stopped".
+   - **Green Light**: Turns on for 10 seconds with a message to "Proceed on".
+   - **Yellow Light**: Turns on for 5 seconds with a message to "Slow down".
+   - **Red Light**: Cycles back to red for 5 seconds with a message to "Stop".
+
+5. **Emergency Mode**
+   - When the emergency LED is on, the system stops all traffic and displays an emergency message.
+   - The traffic light cycle is paused during this mode.
 
 #### For further details on the design and code implementation, feel free to refer to the Hardware.md file and the .cpp code file(s) in this folder.
+
+## Sources Used:
+#### 1. [How to Turn LED On/Off w/ Debounced Switch](https://roboticsbackend.com/arduino-turn-led-on-and-off-with-button/)
