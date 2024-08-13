@@ -67,6 +67,8 @@ curl -X POST http://<ESP8266 IP Address>/update \
 
 1. **Upload the Code**
    - Upload the sketch to your ESP8266 board using the Arduino IDE.
+   - Unplug the RESET pin of the ESP8266 from that of the Arduino.
+   - Press the red RESET button on the Arduino and proceed after receiving Wifi connectivity confirmation.
 
 2. **Send RGB Data**
    - Once the ESP8266 is connected to Wi-Fi, send RGB data to the ESP8266 using the following `curl` command:
