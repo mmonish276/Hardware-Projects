@@ -57,3 +57,5 @@
 
 ## Sources Used:
 #### 1. [How to Turn LED On/Off w/ Debounced Switch](https://roboticsbackend.com/arduino-turn-led-on-and-off-with-button/)
+#### 2. Arduino's Forum
+#### 3. [LED and Switch in Arduino](https://binaryupdates.com/led-and-switch-with-arduino-uno/)
