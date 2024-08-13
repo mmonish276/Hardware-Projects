@@ -1,7 +1,7 @@
 # LED Matrix Project
 
 ## Description
-#### The LED Matrix is a design that can display various images on a grid of Adafruit RGB Neopixels (256 in this project), extracting RGB values from hexadecimal image files uinder the control of a wireless ESP8266 ESP-01 Wireless Transceiver Module. The code is able to recieve HTTP POST requests from the command prompt of a laptop and process it into a Neopixel LED display.
+#### The LED Matrix is a design that can display various images on a grid of Adafruit RGB Neopixels (256 in this project), extracting RGB values from hexadecimal image files uinder the control of a wireless ESP8266 ESP-01 Wireless Transceiver Module. The code is able to receive HTTP POST requests from the command prompt of a laptop and process it into a Neopixel LED display.
 
 ## Components Used
 #### 1. Adafruit Neopixel Array (16x16)
