@@ -32,10 +32,6 @@ curl -X POST http://<ESP8266 IP Address>/update \
 
 ## Code Information
 
-# ESP8266 NeoPixel Controller
-
-This project utilizes an ESP8266 microcontroller to control a strip of NeoPixel LEDs. The microcontroller connects to a Wi-Fi network and sets up an HTTP server to receive and process RGB color data sent via POST requests. This README provides an overview of the code's key features and functionality.
-
 ## Key Features
 
 1. **Wi-Fi Connectivity**
