@@ -86,10 +86,6 @@ This project utilizes an ESP8266 microcontroller to control a strip of NeoPixel 
 - **Hardware**: ESP8266 microcontroller, NeoPixel LED strip, potentiometer.
 - **Software**: Arduino IDE, required libraries (`ESP8266WiFi`, `ESP8266WebServer`, `Adafruit_NeoPixel`, `FS`).
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
 #### For further details on the design and code implementation, feel free to refer to the Hardware.md file and the .cpp code file(s) in this folder.
 
 ## Sources
